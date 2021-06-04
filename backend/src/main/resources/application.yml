@@ -20,3 +20,6 @@ spring:
     
     hibernate:
       ddl-auto: none
+
+application:
+  description: Projeto tela de cotações
