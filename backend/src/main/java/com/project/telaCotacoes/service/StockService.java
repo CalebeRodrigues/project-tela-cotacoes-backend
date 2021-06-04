@@ -1,5 +1,6 @@
 package com.project.telaCotacoes.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import javax.validation.Valid;
@@ -51,6 +52,16 @@ public class StockService {
 		repository.save(stock);
 
 		return mapper.toDTO(stock);
+	}
+
+	@Transactional(readOnly = true)
+	public List<StockDTO> findAll() {
+		return mapper.toDTO(repository.findAll());
+	}
+
+	@Transactional(readOnly = true)
+	public StockDTO findById(Long id) {
+		return repository.findById(id).map(mapper::toDTO).orElseThrow();
 	}
 
 }
