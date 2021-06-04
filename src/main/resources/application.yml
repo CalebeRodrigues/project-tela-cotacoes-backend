@@ -9,14 +9,14 @@ spring:
   
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/db_bootcamp
-    username: postgres
-    password: admin
+    url: postgres://gfrwqdpbjeinze:286a88fbd28090e3711d1d35fa65b76326b6cf49a7b44d03a233ed6a0e67a1a3@ec2-34-193-101-0.compute-1.amazonaws.com:5432/d4e2s25oeo214e
+    username: gfrwqdpbjeinze
+    password: 286a88fbd28090e3711d1d35fa65b76326b6cf49a7b44d03a233ed6a0e67a1a3
    
   jpa: 
     show-sql: true
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-    generate-ddl: false
+    generate-ddl: true
     
     hibernate:
       ddl-auto: none
